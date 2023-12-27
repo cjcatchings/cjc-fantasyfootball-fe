@@ -1,0 +1,37 @@
+{
+  "name": "cjc-fantasy-football",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "set NODE_ENV=local & next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.4.19",
+    "next": "13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "latest",
+    "material-ui-popup-state": "latest",
+    "@mui/material": "latest",
+    "@mui/x-date-pickers": "latest",
+    "@mui/x-data-grid": "latest",
+    "@mui/x-charts": "latest",
+    "dayjs": "latest"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
+    "jest": "latest",
+    "jest-environment-jsdom": "latest",
+    "jest-styled-components": "latest"
+  }
+}

@@ -1,0 +1,38 @@
+name: cjc-fantasy-football
+services:
+  mongo-be:
+    container_name: mongo-be
+    image: mongo:latest
+    volumes:
+      - mongo-vol-db:/data/db
+      - mongo-vol-dbconfig:/data/configdb
+    ports:
+      - "26019:27017"
+  flask-mw:
+    container_name: flask-mw
+    image: elvira/fantasyfootball-mwlayer:v0.1
+    ports:
+      - "5000:5000"
+    environment:
+      - FF_PYENV=DEV
+      - MongoEnv=${MongoEnv}
+      - MongoHost=${MongoHost}
+      - MongoPort=${MongoPort}
+      - MongoUsername=${MongoUsername}
+      - MongoPassword=${MongoPassword}
+      - AuthSecret=${AuthSecret}
+      - JwtSecret=${JwtSecret}
+  next-fe:
+    container_name: next-fe
+    build: .
+    image: elvira/fantasyfootball-fe:v0.1
+    ports:
+      - "3000:3000"
+
+volumes:
+  mongo-vol-db:
+    external: true
+    name: mongo-vol-db
+  mongo-vol-dbconfig:
+    external: true
+    name: mongo-vol-dbconfig

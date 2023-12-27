@@ -1,0 +1,19 @@
+
+.slidingText {
+    position: absolute;
+    width: 100%;
+    transform: translateX(0%);
+    white-space: nowrap;
+}
+
+.referenceBox {
+    height: 30;
+    width: '300px';
+    padding: 0;
+    borderRadius: 1;
+    overflow: 'hidden';
+}
+
+.relativeBox {
+    position: 'relative';
+}
